@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxi Burgers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🍔 Maxi Burgers</h1>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menú</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div>
+            <h2>Las mejores hamburguesas 🍔</h2>
+            <p>Comida rápida, deliciosa y preparada especialmente para vos.</p>
+            <button onclick="verMenu()">Ver menú</button>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2 class="titulo">Nuestro Menú</h2>
+
+        <div class="productos">
+
+            <div class="producto">
+                <div class="imagen">🍔</div>
+                <h3>Hamburguesa Clásica</h3>
+                <p>Carne, queso, lechuga, tomate y salsa especial.</p>
+                <span>$6.500</span>
+                <button onclick="agregarAlCarrito('Hamburguesa Clásica', 6500)">
+                    Agregar
+                </button>
+            </div>
+
+            <div class="producto">
+                <div class="imagen">🍟</div>
+                <h3>Papas Fritas</h3>
+                <p>Papas crocantes con nuestra salsa especial.</p>
+                <span>$3.000</span>
+                <button onclick="agregarAlCarrito('Papas Fritas', 3000)">
+                    Agregar
+                </button>
+            </div>
+
+            <div class="producto">
+                <div class="imagen">🌭</div>
+                <h3>Pancho Especial</h3>
+                <p>Pancho con queso, papas y salsa.</p>
+                <span>$4.000</span>
+                <button onclick="agregarAlCarrito('Pancho Especial', 4000)">
+                    Agregar
+                </button>
+            </div>
+
+            <div class="producto">
+                <div class="imagen">🥤</div>
+                <h3>Gaseosa</h3>
+                <p>Gaseosa fría de 500 ml.</p>
+                <span>$2.000</span>
+                <button onclick="agregarAlCarrito('Gaseosa', 2000)">
+                    Agregar
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="carrito">
+        <h2>🛒 Tu pedido</h2>
+
+        <ul id="listaCarrito"></ul>
+
+        <h3>Total: $<span id="total">0</span></h3>
+
+        <button onclick="realizarPedido()" class="pedido">
+            Realizar pedido
+        </button>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>📍 Contactanos</h2>
+        <p>📞 Teléfono: 351 123 4567</p>
+        <p>📧 Email: maxiburgers@gmail.com</p>
+        <p>📍 Córdoba, Argentina</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Maxi Burgers - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
